@@ -45,11 +45,16 @@ def test4():
 
 
 def test5():
+    """
+    输出的 key 顺序与初始化无关
+    没能验证 每次执行key的顺序都不一样
+    :return:
+    """
     dict1 = {"k1": "v1", "k3": "v3", "k2": "v2", "k12": "v2", "k23": "v2"}
     dict2 = {"k1": "v1", "k3": "v3", "k2": "v2", "k12": "v2", "k23": "v2"}
     dict3 = {"k1": "v1", "k3": "v3", "k2": "v2", "k12": "v2", "k23": "v2"}
     for k in dict1.keys():
-        print k,
+        print k,  # k3 k2 k1 k23 k12
     print
 
     for k in dict2.keys():
