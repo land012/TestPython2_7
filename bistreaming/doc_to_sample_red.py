@@ -261,6 +261,7 @@ read_idf_dict(idf_dict)
 sample = Sample()
 content_feature = sample.context.add().content_feature
 
+
 def output(value):
     model = json.loads(value)
     try:

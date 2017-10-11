@@ -4,15 +4,17 @@ str1 = "abc"
 i1 = iter(str1)
 
 """
-Traceback (most recent call last):
-  File "D:/_python/TestPython27/iter/iterdemo.py", line 6, in <module>
-    print(i1.next())
-StopIteration
 a
 b
 c
 """
-while True:
-    print(i1.next())
+try:
+    while True:
+        print(i1.next())
+except StopIteration as e:
+    print("==" + str(e))  # ==
 
+
+print(i1)  # <iterator object at 0x0267E670>
+print(type(i1))  # <type 'iterator'>
 

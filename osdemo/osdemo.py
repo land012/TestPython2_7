@@ -1,8 +1,8 @@
-#coding:utf-8
+# coding:utf-8
+import os
 
 __author__ = 'xudazhou'
 
-import os
 
 # print(os.name)  # nt
 

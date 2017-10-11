@@ -27,7 +27,20 @@ print(date1.strftime("%Y-%m-%d"))  # 2014-04-05
 print(date1.today())  # 2016-12-05
 """
 
-dt1 = datetime.datetime.strptime("2015-12-01 3:5:15", "%Y-%m-%d %H:%M:%S")
-print(dt1.today())  # 2016-12-05 22:39:01.821000
-print(dt1.strftime("%Y-%m-%d %H:%M:%S"))  # 2015-12-01 03:05:15
-print(dt1.strftime("%Y-%m-%d"))  # 2015-12-01
+
+def test5():
+    dt1 = datetime.datetime.strptime("2015-12-01 3:5:15", "%Y-%m-%d %H:%M:%S")
+    print(dt1.today())  # 2016-12-05 22:39:01.821000
+    print(dt1.strftime("%Y-%m-%d %H:%M:%S"))  # 2015-12-01 03:05:15
+    print(dt1.strftime("%Y-%m-%d"))  # 2015-12-01
+
+
+def test2():
+    today = datetime.date.today()
+    date1 = today + datetime.timedelta(days=-23)
+    print(date1)
+    pass
+
+
+if __name__ == "__main__":
+    test2()
