@@ -1,4 +1,9 @@
 # coding:utf-8
+
+import module1
+import traceback
+import sys
+
 __author__ = 'xudazhou'
 
 
@@ -35,4 +40,21 @@ def test1():
 
 
 if __name__ == "__main__":
-    test1()
+    # test1()
+    try:
+        module1.fn3()
+    except AttributeError:
+        # traceback.print_exc(file=sys.stderr)
+        print(traceback.format_exc())
+        print("====================== 1 =========================")
+        ex_i = sys.exc_info()
+        print(ex_i)
+        print("====================== 2 =========================")
+        exc_traceback = ex_i[2]
+        # print(exc_traceback.tb_lineno)
+        # print(traceback.format_tb(exc_traceback))
+        arr = traceback.extract_tb(exc_traceback)
+        print(arr)
+        pass
+
+    print("================ end ==================")

@@ -1,7 +1,11 @@
-# coding:utf-8
+# coding: utf-8
 import re
 """
 修改 yml
+逐行读文件，然后拼接到 text，
+替换需要修改的部分，
+读取完整个文件
+覆盖原文件
 """
 
 __author__ = 'xudazhou'

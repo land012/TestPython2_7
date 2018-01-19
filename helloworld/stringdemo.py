@@ -71,5 +71,12 @@ def test2():
     l_list = l_str.split(",")
     print(len(l_list))  # 4
 
+
+def test3():
+    l_str = " abcde "
+    print(l_str.rstrip())
+    print(l_str.lstrip())
+
+
 if __name__ == "__main__":
-    test2()
+    test3()

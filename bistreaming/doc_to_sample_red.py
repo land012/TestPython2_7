@@ -169,9 +169,9 @@ def content_model_2_feature(feature, model, ctr_dict={}, idf_dict={}):
         product_domain_ctr = feature.product_domain_ctr.add()
         product_domain_ctr.value = float(domain_ctr)
 
-    # todo: comment_num = 15;
-    # todo: mark_num = 16;
-    # todo: share_num = 17;
+    # tod: comment_num = 15;
+    # tod: mark_num = 16;
+    # tod: share_num = 17;
     feature.domain = site
     feature.source_id = int(model['source_id'])
     feature.mthid = str(model['mthid'])
