@@ -1,29 +1,45 @@
 import datetime
+import unittest
 
 __author__ = 'xudazhou'
 
 
-'''
-print "a",
+class PrintDemo(unittest.TestCase):
 
-print "gg", ""
+    @staticmethod
+    def test1():
+        print "a",
 
-print("b")
+        print "gg", ""
 
-print "%s" % "abc",
+        print("b")
 
-print("ef")
-'''
-a = 80
-print a,
+        print "%s" % "abc",
 
-# k1-v1 | END
-print "%s-%s" % ("k1", "v1"), '|', 'END',
+        print("ef")
 
-print("============ 1 ===============")
+    @staticmethod
+    def test2():
+        a = 80
+        print a,
 
-print "this is {food}".format(food="bread")  # this is bread
+    @staticmethod
+    def test3():
+        # k1-v1 | END
+        print "%s-%s" % ("k1", "v1"), '|', 'END',
 
-# 2016-12-22 15:38:42
-print "%s | %s" % (datetime.datetime.fromtimestamp(1482392322),
-                 "haha")
+    @staticmethod
+    def test4():
+        print "this is {food}".format(food="bread")  # this is bread
+
+    @staticmethod
+    def test5():
+        # 2016-12-22 15:38:42
+        print "%s | %s" % (datetime.datetime.fromtimestamp(1482392322), "haha")
+        print "%s | %s" % (datetime.datetime.fromtimestamp(1482392322.1), "haha")
+
+    @staticmethod
+    def test6():
+        list1 = ["a", "b"]
+        print("%s" % list1)  # ['a', 'b']
+

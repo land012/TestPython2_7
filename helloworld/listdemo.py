@@ -16,7 +16,7 @@ def test3():
     """
     l_list1 = list(["a", "aa"])
     l_list1.append(["b", "c"])  # ['a', 'aa', ['b', 'c']]
-    print(l_list1)
+    print("list=%s" % l_list1)
 
 
 def test4():
@@ -25,4 +25,4 @@ def test4():
     print(l_list1)  # ['a', 'aa', 'b', 'c']
 
 if __name__ == "__main__":
-    test4()
+    test3()

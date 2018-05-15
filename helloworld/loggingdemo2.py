@@ -21,10 +21,15 @@ class LoggingDemo(unittest.TestCase):
         tup1 = ("a", "b", 1)
         logging.info(tup1)
 
+        i1 = 5
+        logging.info("i1=%s", i1)
+
     @staticmethod
     def test2():
         """多个参数"""
         logging.info("%s %s", "s1", "s2")
+        list1 = ["a", "b"]
+        logging.info("list1=%s", list1)
 
     @staticmethod
     def test3():

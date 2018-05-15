@@ -1,5 +1,19 @@
 # coding:utf-8
+
+import unittest
+
 __author__ = 'xudazhou'
+
+
+class StringDemo(unittest.TestCase):
+
+    @staticmethod
+    def test1():
+        str1 = "a b c"
+        if "a b c" == str1:
+            print("1")  # 1
+        else:
+            print("0")
 
 str1 = "a"
 
