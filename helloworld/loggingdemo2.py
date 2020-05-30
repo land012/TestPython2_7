@@ -6,10 +6,10 @@ import unittest
 __author__ = 'xudazhou'
 
 
-class LoggingDemo(unittest.TestCase):
+class LoggingDemo2(unittest.TestCase):
 
     logging.basicConfig(level=logging.INFO,
-                        format='%(asctime)s %(levelname)s (%(lineno)d) - %(message)s',
+                        format='%(name)s p%(process)d-t%(thread)d %(asctime)s %(levelname)s (%(lineno)d) | %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
 
     @staticmethod

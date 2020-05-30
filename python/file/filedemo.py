@@ -1,6 +1,6 @@
 __author__ = 'xudazhou'
 
-f = open("E:\TDDOWNLOAD\\temp\\1.txt", "r")
+f = open("1.txt", "r", encoding="utf-8")
 list1 = f.readlines()
 
 print(type(list1))  # <type 'list'>

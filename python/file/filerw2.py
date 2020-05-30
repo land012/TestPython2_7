@@ -12,9 +12,10 @@ for line in f:
     else:
         text += line
 
+print(text)
+
 f.seek(0)
 f.truncate()
 f.write(text)
 
 f.close()
-

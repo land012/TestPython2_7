@@ -1,5 +1,5 @@
 # coding:utf-8
-
+from __future__ import print_function
 import unittest
 
 __author__ = 'xudazhou'
@@ -14,6 +14,42 @@ class StringDemo(unittest.TestCase):
             print("1")  # 1
         else:
             print("0")
+
+    @staticmethod
+    def test_zh():
+        str1 = "1我"
+        print(len(str1))  # 4
+        print(str1[1:2])  # �
+        print(str1[1:4])  # 我
+        print(ord(str1[0:1]))  # 49
+
+    @staticmethod
+    def test_split():
+        str3 = "a	b	c"
+        # TypeError: split() takes no keyword arguments
+        # str3_arr = str3.split("\t", maxsplit=1)
+
+        # TypeError: split() takes no keyword arguments
+        # str3_arr = str3.split(sep="\t", maxsplit=1)
+
+        # 不需要指定 keyword
+        str3_arr = str3.split("\t", 1)
+
+        # 不支持正则表达式
+        str3_arr2 = str3.split("\s")
+        for e in str3_arr2:
+            print(e)  # a	b	c
+
+    @staticmethod
+    def test_split2():
+        """
+        默认分隔符 支持 制表符，换行
+        :return:
+        """
+        str1 = "a	b c\nd"
+        str1_arr = str1.split()
+        print(len(str1_arr))  # 4
+
 
 str1 = "a"
 
@@ -92,5 +128,4 @@ def test3():
     print(l_str.lstrip())
 
 
-if __name__ == "__main__":
-    test3()
+

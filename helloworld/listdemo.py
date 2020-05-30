@@ -24,5 +24,6 @@ def test4():
     l_list1 = l_list1 + list(["b", "c"])
     print(l_list1)  # ['a', 'aa', 'b', 'c']
 
+
 if __name__ == "__main__":
     test3()
