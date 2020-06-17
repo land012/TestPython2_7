@@ -12,7 +12,7 @@ path = os.getcwd()
 #python方式 邮件发送
 def send_w(subject, message, temail):
     msg = email.MIMEText.MIMEText(message, _subtype='html', _charset='utf-8')
-    femail = 'opviss@163.com'
+    femail = 'opop@163.com'
     msg['To'] = ', '.join(temail)
     msg['From'] = femail
     msg['Subject'] = subject
@@ -20,7 +20,7 @@ def send_w(subject, message, temail):
     print msg.as_string()
     s = smtplib.SMTP()
     s.connect('smtp.163.com')
-    s.login('opviss', '432165')
+    s.login('opop', '1342342')
     s.sendmail(femail, temail, msg.as_string())
     s.close()
 
@@ -29,7 +29,7 @@ def send_w_att(subject, message, temail,attfileList):
     txt=MIMEText(unicode(message),'plain','utf-8')
     msg = MIMEMultipart()
     msg.attach(txt)
-    femail = 'wathclog@baidu.com'
+    femail = 'watch@hector.com'
     if attfileList is not None:
      for attfile in attfileList:
         file=open(attfile["path"], 'rb')
@@ -43,7 +43,7 @@ def send_w_att(subject, message, temail,attfileList):
     msg['Subject'] = subject
     msg['Date'] = Utils.formatdate(localtime=1)
     print msg.as_string()
-    s = smtplib.SMTP('mail2-in.baidu.com')
+    s = smtplib.SMTP('mail.hector.com')
     s.sendmail(femail,temail.split(";"), msg.as_string())
     s.close()
 
@@ -52,13 +52,13 @@ def send_w_html(subject, message, temail):
     txt=MIMEText(unicode(message),'html',"utf-8")
     msg = MIMEMultipart("alternative")
     msg.attach(txt)
-    femail = 'wathclog@baidu.com'
+    femail = 'watch@hector.com'
     msg['To']=temail
     msg['From'] = femail
     msg['Subject'] = subject
     msg['Date'] = Utils.formatdate(localtime=1)
     print msg.as_string()
-    s = smtplib.SMTP('mail2-in.baidu.com')
+    s = smtplib.SMTP('mail.hector.com')
     s.sendmail(femail,temail.split(";"), msg.as_string())
     s.close()
 
@@ -68,7 +68,7 @@ def send_l(subject,message,temail):
     f = open(path+"/tmp.txt","w")
     f.write('To:'+temail)
     f.write(os.linesep)
-    f.write('From:watchlog@baidu.com')
+    f.write('From:log@hector.com')
     f.write(os.linesep)
     f.write('Subject:'+subject)
     f.write(os.linesep)
@@ -87,7 +87,7 @@ def send_ll(subject,message,temail):
     f = open(path+"/tmp.txt","w")
     f.write('To:'+temail)
     f.write(os.linesep)
-    f.write('From:watchlog@baidu.com')
+    f.write('From:watch@hector.com')
     f.write(os.linesep)
     f.write('Subject:'+subject)
     f.write(os.linesep)
@@ -115,11 +115,8 @@ def sendMail(data,history,history_file,login_title,title,temail):
     message = "<style> *{ font-size:12pt;font-weight:700 } td{border: 1px solid #000}</style>"
     message += "<table style='border-collapse:collapse; font-size:9pt'><caption>"+title+"</caption>"
     message += login_title
-    message+= data
+    message += data
     message += content
     message += "</table>"
-    #temail = ["liuhaibin@baidu.com"]
-    #temail = "lxb-rd@baidu.com luowenwen01@baidu.com fanqin@baidu.com fanchunxia@baidu.com chengfang01@baidu.com sunxianqun@baidu.com liuhongshu@baidu.com"
-    #temail = 'liuhaibin@baidu.com'
-    send_l(title,message, temail)
+    send_l(title, message, temail)
 
